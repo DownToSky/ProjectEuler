@@ -2,7 +2,7 @@
 #Euler Problem 3
 import math
 def isPrime(n):
-    if n%2==0 or n<1:
+    if (n%2==0 and n!=2) or n<1:
         return False
     else:
         counter =0
