@@ -1,12 +1,13 @@
 #Author DownToSky
 #Euler Problem 9
-a =0
-notDone = True
-i=1
-while i<1000 and notDone:
-    for j in range(i,1000):
-        k=1000-i-j
-        if i+j<k and i*i+j*j==k*k:
-            print ("answer: "+str(i)+" "+str(j)+" "+ str(k))
-            notDone=False
-            break
+def arePythagTriplet(a,b,c):
+    if a*a+b*b==c*c:
+        return True
+    else:
+        return False
+
+for a in range(1,int(1001/3)):
+    for b in range(a,int(1001/2)):
+        c=1000-a-b
+        if arePythagTriplet(a,b,c):
+            print(str(a*b*c))
