@@ -1,3 +1,5 @@
+#Author DownToSky
+#Euler Problem 13
 def removeEmptyStrings(list):
     numOfEmptyStrings = list.count("")
     for i in range(0,numOfEmptyStrings):
@@ -104,7 +106,36 @@ nums =["37107287533902102798797998220837590246510135740250",
         "72107838435069186155435662884062257473692284509516",
         "20849603980134001723930671666823555245252804609722",
         "53503534226472524250874054075591789781264330331690"]
-
+        
+#Iterates and removes the last digits in the list and finds the sum of them
+#Note that since there are only 100 numbers in the list, the sum will 
+#not exceed 100*9 = 900 and is well inside the range of integer value.
+#
+#Everytime the sum of all last digits is found removes and concatnates the last digit in the sum
+#to the answer string and adds the remaining part of the sum to the list to be computed
+#along in the sum
+#This is repeated until no number is left in the list
+#_______________________________________________________________
+#Observe the algorithm in with this example:
+#List=["123","943","562","355"]
+#
+#1)sum=3+3+2+5=13 remainder=sum/10 ="1" ans=""
+#add the remainder to the list and add the sum to the ans
+# new List=["12","94","56","35","1"]    ans=sum%10="3"
+#
+#2)sum=2+4+6+5+1=18 remainder=sum/10 ="1" ans="3"
+#add the remainder to the list and add the sum to the ans
+# new List=["1","9","5","3","1"]    ans=sum%10+ans="83"
+#
+#3)sum=1+9+5+3+1=19 remainder=sum/10 ="1" ans="9"
+#add the remainder to the list and add the sum to the ans
+# new List=["1"]    ans=sum%10+ans="983"
+#
+#4)sum=1 remainder=sum/10 ="" ans="3"
+#add the remainder to the list and add the sum to the ans
+# new List=[]    ans=sum%10+ans="1983"
+#
+#ans="1983" is the result 
 
 sum =""
 while True:
