@@ -1,15 +1,21 @@
 #Author DownToSky
 #Euler Problem 15
 
-#Sadly the answer for this problem for xPosFinal=20 and yPosFinal=20  is REALLY BIG
-def numsOfRoutes(x,y,xFinal,yFinal):
-    if x==xFinal or y==yFinal:
-        return 1
-    else:
-        return numsOfRoutes(x+1,y,xFinal,yFinal)+numsOfRoutes(x,y+1,xFinal,yFinal)
-        
-xPosFinal=12
-yPosFinal=12
-xPosStart=0
-yPosStart=0
-print(str(numsOfRoutes(xPosStart,yPosStart,xPosFinal,yPosFinal)))
+#The lattice is a n by n grid
+n=20
+#Finds the number of paths in i and j position from the previous i and j positions
+grid=[[0]*(n+1)]*(n+1)
+
+for i in range(n,-1,-1):
+        for j in range(n,-1,-1):
+            if i==n and j==n:
+                grid[i][j]=1
+            else:
+                if i==n:
+                    grid[i][j]=grid[i][j+1]
+                else:
+                    if j==n:
+                        grid[i][j]=grid[i+1][j]
+                    else:
+                        grid[i][j]=grid[i+1][j]+grid[i][j+1]
+print(grid[0][0])
