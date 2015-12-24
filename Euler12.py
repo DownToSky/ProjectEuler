@@ -1,3 +1,5 @@
+#Author DownToSky
+#Euler Problem 12
 import math
 """
     We know if n=AB (A,B both int) then, either A>sqrt(n) or B>sqrt(n).
@@ -9,7 +11,7 @@ import math
     have actually found two divisors. The only special case is when sqrt(n) is an integer, in which
     we know sqrt(n) is also a divisor of n(since sqrt(n)^2==n)
     Not using this fact will result in a very long computation time.
-    """
+"""
 def numOfDivisors(n):
     count =0
     sqrt=int(math.sqrt(n))
