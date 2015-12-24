@@ -22,12 +22,14 @@ grid = [
     [20, 73, 35, 29, 78, 31, 90,  1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57,  5, 54],
     [ 1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52,  1, 89, 19, 67, 48]
     ]
-#There are 4 different iterations to be done. Highest product in vertical line, in horizontal line
-#, in diagonal(from top left to bottom right), and in diagonal(from top right to bottom left)
-biggestVerti=[0]*4
-biggestHori=[0]*4
-biggestDiag_Right=[0]*4
-biggestDiag_Left=[0]*4
+#There are 4 different iterations to be done. Highest product in vertical line, in horizontal line,
+#in diagonal(from top left to bottom right), and in diagonal(from top right to bottom left)
+biggestVerti=[0]*4           #Highest product in vertical line
+biggestHori=[0]*4            #Highest product in horizontal line
+biggestDiag_Right=[0]*4 #Highest product in diagonal line(from top right to bottom left)
+biggestDiag_Left=[0]*4  #Highest product in diagonal line(from top left to bottom right)
+
+#Starting iteration for all four possibilities. Not overstepping the bounds is very important
 #the 4 numbers in horizontal line with highest product:
 for i in range(0,20):
     for j in range(0,20-4+1):
@@ -88,6 +90,7 @@ for i in range(0,20-4+1):
         
         if tempLast<tempNow :
             biggestDiag_Right=currentBiggestMultiple
+#Comparing the results of all iterations and finding the final answer:
 tempV=1
 tempH=1
 tempD_L=1
@@ -104,4 +107,5 @@ if(max<tempD_L):
     max=tempD_L
 if(max<tempD_R):    
     max=tempD_R
+    
 print(str(max))    
