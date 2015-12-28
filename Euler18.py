@@ -1,6 +1,8 @@
 #Author DownToSky
 #Euler Problem 18
 #This problem uses a similar approach to lattice paths in problem 15
+#Starting from the lowest positions we find the maximum to that position and 
+#build it up till we get to the top
 list=[
 [75],
 [95, 64],
@@ -18,8 +20,21 @@ list=[
 [63, 66,  4 ,68 ,89, 53, 67 ,30 ,73, 16, 69 ,87 ,40 ,31],
 [ 4 ,62 ,98 ,27 ,23 , 9 ,70, 98 ,73, 93, 38, 53, 60,  4 ,23],
 ]
-maximumTopBot=[[]*len(list)]
+
 #initializing maximumTopBot
+
+maximumTopBot=[[]]*len(list)
 for i in range(0,len(list)):
     maximumTopBot[i]=[0]*len(list[i])
-    print(maximumTopBot[i])
+
+for i in range(0,len(maximumTopBot[-1])):
+    maximumTopBot[-1][i]=list[-1][i]
+
+for i in range(len(maximumTopBot)-2,-1,-1):
+    for j in range(0,len(maximumTopBot[i])):
+        if maximumTopBot[i+1][j]>maximumTopBot[i+1][j+1]:
+            maximumTopBot[i][j]=maximumTopBot[i+1][j]+list[i][j]
+        else:
+            maximumTopBot[i][j]=maximumTopBot[i+1][j+1]+list[i][j]
+
+print(maximumTopBot[0][0])
