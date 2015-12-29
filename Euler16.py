@@ -5,10 +5,13 @@ def removeEmptyStrings(list):
     for i in range(0,numOfEmptyStrings):
         list.remove("")
     return list
-    
+#Same function from Large Sum Problem (euler13) was used to calculate the double of a number given
+#in string format. The number given will be put to a list twice and the sum of the numbers in the list
+#is returned:   n+n=2n    
 def MultiplyByTwo(n):
     nums=[str(n)]*2
     sum =""
+    #Find the sum of numbers in nums list given in string format:
     while True:
         sumOfLastDigs = 0
         remainder=""
@@ -29,7 +32,7 @@ def MultiplyByTwo(n):
                 nums.append(remainder)
     return  sum
 
-    
+#Multiplying 1 by 2 a thousand time and printing the sum of its digits:    
 multi="1"
 for i in range(0,1000):
     multi=MultiplyByTwo(multi)
