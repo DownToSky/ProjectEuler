@@ -3,7 +3,7 @@
 
 #Authors sidenote: Its possible to reduce the if-blocks for 100s and 1000s by
 #adding the word in that digit("one", "two", etc.) to "hundred" or"thousand"
-#but since we dont need to evaluate for numbers above 1000, I used boring if blocks to make the function
+#but since we dont need to evaluate for numbers above 1000, I used the boring if blocks to make the function
 
 #returns the number of characters in the word form of number n (including"and"), where 0<n<10000
 def WordsInNumber(n):
