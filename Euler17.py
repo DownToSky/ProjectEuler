@@ -5,7 +5,7 @@
 #adding the word in that digit("one", "two", etc.) to "hundred" or"thousand"
 #but since we dont need to evaluate for numbers above 1000, I used the boring if blocks to make the function
 
-#returns the number of characters in the word form of number n (including"and"), where 0<n<10000
+#returns the number of characters in the word form of number n (including "and"), where 0<n<10000
 def WordsInNumber(n):
     if n<1 or n>9999:
         return -1
