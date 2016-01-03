@@ -39,12 +39,14 @@ def LenOfCycle(divisor):
         dividend=dividend%divisor
     return cycleLength
 
-answer=0
+maxLen=0
+maxNum=1
 for i in range(1,1000):
     currentCycleLen= LenOfCycle(i)
-    if answer<currentCycleLen:
-        answer=currentCycleLen
-print(str(answer))
+    if maxLen<currentCycleLen:
+        maxLen=currentCycleLen
+        maxNum=i
+print(str(maxNum))
         
         
     
