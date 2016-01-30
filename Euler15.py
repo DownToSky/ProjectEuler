@@ -64,7 +64,7 @@ for i in range(n,-1,-1):
                         grid[i][j]=grid[i+1][j]+grid[i][j+1]
 print(grid[0][0])
 
-#Side Note(author's little note):This lattice path looks like a section of pascal triangle:
+#Side Note:This lattice path looks like a section of pascal triangle:
 #            1
 #           1 1
 #          1 2 1
