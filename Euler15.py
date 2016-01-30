@@ -64,11 +64,10 @@ for i in range(n,-1,-1):
                         grid[i][j]=grid[i+1][j]+grid[i][j+1]
 print(grid[0][0])
 
-#Side Note:This lattice path looks like a section of pascal triangle:
+#Side Note:This lattice path looks like a square section cut off of pascal's triangle:
 #            1
 #           1 1
 #          1 2 1
 #         1 3 3 1
 #        1 4 6 4 1
-#Wich can determine the coeeficients in (a+b)^n if i recall
-# reeeeeeally interesting ......
+#Which can determine the coeeficients in (a+b)^n if i recal. reeeeeeally interesting ......
