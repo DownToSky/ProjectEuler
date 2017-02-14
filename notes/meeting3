@@ -1,0 +1,24 @@
+Prime numbers
+-------------
+A prime number is natural number that is only divisible by 1 and itself. A natural number
+greater than 1 that is not prime is called composite. 
+
+There are infinitely many primes:
+    consider a finite number of primes p1, p2, ... , pn. The following number must also be 
+    prime:
+        K = 1+(p1)(p2)...(pn)       since it's dividing K by any of the primes has the
+                                    remainder 1
+    (So we can show that the number of primes is infinite by showing an injection from the
+    set of primes found this way to the prime numbers)
+
+Side notes and related topics:
+    Goldbach's conjecture: Every even number more than two can be written as sum of two primes
+        *)Is still unproven
+
+Finding Primes:
+    How do would you code a function that states the primality of a given number?
+        most natural way would be trial division:
+        Count how many times the number can be divided by m while m goes from 1 to n. Then,
+        decide if the number is the 
+            *) Two is the only even number
+            *) We can easily show that we don't have to check up until more than sqrt(n)
