@@ -22,3 +22,4 @@ Finding Primes:
         decide if the number is the 
             *) Two is the only even number
             *) We can easily show that we don't have to check up until more than sqrt(n)
+                (show in n = ab, either a or b are < sqrt(n))
