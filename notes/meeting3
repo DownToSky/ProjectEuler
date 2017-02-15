@@ -13,8 +13,11 @@ There are infinitely many primes:
 
 Side notes and related topics:
     Goldbach's conjecture: Every even number more than two can be written as sum of two primes
-        *)Is still unproven
-
+    
+    Twin Prime conjecture: Twin primes are primes with a difference of 2. Are they infinitely
+                            many twin primes?
+        Related: Chen's theorem: There are infinitely many primes such that adding a two to any
+                                    of them, creates a number that is a factor of two primes
 Finding Primes:
     How do would you code a function that states the primality of a given number?
         most natural way would be trial division:
@@ -22,3 +25,34 @@ Finding Primes:
         decide if the number is the 
             *) Two is the only even number
             *) We can easily show that we don't have to check up until more than sqrt(n)
+                (Show that in n = ab, either a or b are less than or equal to sqrt(n))
+    Sieves: For finding primes up to a limit.
+            O)Sieve of Eratosthenes: Find primes up to a limit. Start with p = two and go through 
+                                    the list and mark every multiple of the p starting from p^2
+                                    as a composite number: p^2, p^2+p, p^2+2p, ...
+                                    Pick the next non composite as your new prime and repeat the
+                                    process again until of the sqrt(limit) is reached. (We make an 
+                                                                                         arithmatic
+                                                                                         sequence 
+                                                                                         this way)
+                This runs in O(nlog(log(n)))
+            O)Sive of Sundaram: Start with list of integers from 1 to n. Remove all numbers in the
+                form i + j + 2ij while 1<=i<=j. For every number k in the remaining list. 2k+1 is 
+                an odd prime.
+
+                Why does it work?
+                    Double and add one to all numbers in the list. You get a list from 3 to 2n+1.
+                    Claim: p is and odd integer of form 2k+1. p is excluded(not prime) 
+                            iff k can be writtenas i+j+2ij:
+                            q = 2(i+j+2ij)+1 = 2i+2j+4ij+1 = (2i+1)(2j+1)
+            O)Sieve of Atkin: 
+GCD
+----
+    Greatest Common Divisor
+What I read:
+        https://luckytoilet.wordpress.com/2010/04/18/the-sieve-of-sundaram/
+
+        Wikipedia
+        some stack overflow
+        Fun With Prime Numbers By Steve Litt
+        An Introduction to Prime Number SIeves by Jonathan Sorenson University of Wisconsin-Madison
