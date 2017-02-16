@@ -35,7 +35,20 @@ Finding Primes:
                                                                                          arithmatic
                                                                                          sequence 
                                                                                          this way)
-                This runs in O(nlog(log(n)))
+                This runs in O(nlog(log(n))) with O(n) bits(make bit arrays instaed) memory usage.
+                    *)definitions:
+                        p is a prime
+
+                    Initialize the bit array of size n bits to all 1's in O(n).
+                    Time spend finding the next prime is the number of times we add 1 to p which is
+                        O(sqrt(n))
+                    Times spent removeing multiples is worst case:
+                        SUM_{for p in primes} n/p = O(n log(log(n))) which is true since
+                        sum of prime harmonic series O(loglogn) (it's a long proof)
+                    there are many variations to the algorthim that try to discard a number only
+                    once so they run in O(n). Some try to use O(sqrt(n))
+                    
+                
             O)Sive of Sundaram: Start with list of integers from 1 to n. Remove all numbers in the
                 form i + j + 2ij while 1<=i<=j. For every number k in the remaining list. 2k+1 is 
                 an odd prime.
@@ -45,13 +58,24 @@ Finding Primes:
                     Claim: p is and odd integer of form 2k+1. p is excluded(not prime) 
                             iff k can be writtenas i+j+2ij:
                             q = 2(i+j+2ij)+1 = 2i+2j+4ij+1 = (2i+1)(2j+1)
-            O)Sieve of Atkin: 
+            O)Sieve of Atkin: --<to be added>--
+                This runs in O(n/(log(log(n)))) 
+            There are probabilistic algorithms that can guess if a number is prime.
 GCD
 ----
-    Greatest Common Divisor
+    Greatest Common Divisor 
+
+    Euclidea algorithm:
+    
+    
+    def gcd (a, b):
+        if a == 0:
+            reutrn b
+        else  
+            return gcd(b%a,a)
+
 What I read:
         https://luckytoilet.wordpress.com/2010/04/18/the-sieve-of-sundaram/
-
         Wikipedia
         some stack overflow
         Fun With Prime Numbers By Steve Litt
