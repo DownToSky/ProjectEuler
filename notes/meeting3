@@ -25,6 +25,7 @@ Finding Primes:
         decide if the number is the 
             *) Two is the only even number
             *) We can easily show that we don't have to check up until more than sqrt(n)
+<<<<<<< HEAD
                 (Show that in n = ab, either a or b are less than or equal to sqrt(n))
     Sieves: For finding primes up to a limit.
             O)Sieve of Eratosthenes: Find primes up to a limit. Start with p = two and go through 
@@ -80,3 +81,6 @@ What I read:
         some stack overflow
         Fun With Prime Numbers By Steve Litt
         An Introduction to Prime Number SIeves by Jonathan Sorenson University of Wisconsin-Madison
+=======
+                (show in n = ab, either a or b are < sqrt(n))
+>>>>>>> 9cd8e0ce51399ff8eaa51962ed2b890864444000

@@ -75,7 +75,7 @@ def __matrix_to_power(m,p,cache):
 	m2=__matrix_multi(m2,m2)
 	if p%2 is 1:
 		m2=__matrix_multi(m2,m)
-	cache[p]=m2	
+	cache[p]=m2
 	return m2
 
 def Fib(n):
@@ -88,7 +88,7 @@ def Fib(n):
 		return n
 	#Get reverse of the binary string of n in a list object. Reversing will make
 	#it easier to see how multipication process works
-	
+
 	#bin_rep=[int(x) for x in bin(n)[2:]]
 	#bin_rep.reverse()
 	#powers=[2**i for i in range(0,len(bin_rep)) if bin_rep[i] is 1]
