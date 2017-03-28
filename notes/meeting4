@@ -5,6 +5,17 @@ e.g.    f(1) = 1    for n>1 f(n) = f(n-1) + 1
         some reccurences can be "solved" into a closed-form which is
         specifically useful for asymptotic analysis
 
+You have a 1xn floor we want to colour by 1x2 red tiles, 1x3 blue tiles, and 1x3 white tiles.
+How many ways to tile this floor?
+An : denotes the number of ways to tile a 1xn floor
+An =
+    A(n-2)+     #the left-most tile is red
+    A(n-3)+     #the left-most tile is blue
+    A(n-3)+     #the left-most tile is white
+
+
+
+Then the reccurence is 
 Unrolling the Reccurence:
 -------------------------
     Example: Tower of Hanoi
